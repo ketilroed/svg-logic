@@ -1,0 +1,174 @@
+:root {
+  --red: red;
+  --maxFont: 18;
+  --minFont: 14;
+  /* --bodyColor: #ffffff; */
+  --bodyColor: rgb(249, 246, 236);
+  --mainColor: var(--bodyColor);
+  --headerColor: var(--bodyColor);
+  --linkColor: blue;
+  --headerFontSize: 1.8rem;
+  --headerWidth: 200px;
+}
+
+/* ------- Page elements ----- */
+html {
+  font-size: 100%
+}
+
+body {
+  margin: 0;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  font-family: Arial;
+  /*, Helvetica, sans-serif;*/
+  /* font-size: var(--maxFont); */
+  line-height: 1.5;
+  /* color: #000000; */
+  /* source for automatic scaling:https://css-tricks.com/books/volume-i/scale-typography-screen-size/ */
+  font-size: calc(var(--minFont)*1px + ((var(--maxFont) - var(--minFont)) * (100vw - 300px)/(1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  /* padding */
+}
+
+svg  {
+  /* overflow: visible; */
+  height: 100%;
+  width: 100%;
+  /* background: blue */
+}
+
+main, section, header, aside, footer {
+  margin: 0;
+  /* padding: 1rem; */
+  border: 0px solid #000000;
+  color: #000000;
+}
+
+header {
+  background: var(--headerColor);
+  color: #000000;
+  top: 0;
+  width: 100%;
+  /* left: 100; */
+  /* width: var(--headerWidth); */
+  /* position: absolute; */
+  position: relative;
+  /* height: 10%; */
+  overflow: auto;
+  text-align: center;
+    padding: 14px 16px;
+}
+
+main {
+  /* background: #dddddd; */
+  /* background: rgb(249, 246, 236); */
+  /* background-color: #ffffff; */
+  /* margin: 20px; */
+  /* margin-left: var(--headerWidth); */
+  /* margin-right: var(--headerWidth); */
+}
+
+nav {
+  background-color: var(--headerColor);
+  overflow: hidden;
+  padding: 14px 16px;
+  text-align: center;
+
+  display: block;
+  /* color: #f2f2f2; */
+  color: black;
+  text-align: center;
+  /* padding: 14px 16px; */
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-decoration: none;
+  font-size: var(--headerFontSize);
+  /* font-size: 1.8rem; */
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+  /* font-style: italic; */
+}
+
+a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited{
+  color:black;
+}
+
+a:active{
+  color: blue;
+}
+/* .topnav {
+  background-color: var(--headerColor);
+  overflow: hidden;
+  padding: 14px 16px;
+  text-align: center;
+}*/
+
+.wrapper {
+  margin: 2vw auto;
+  max-width: 1000px;
+  min-width: 100px;
+  border: 0px solid grey;
+  padding: 10px 10px 10px 10px;
+
+}
+
+.chart {
+  /*background: linear-gradient(to bottom, #91c5d0 0%, #d8eded 100%);*/
+  /* margin: 20px auto; */
+  /* margin-bottom: 2vw; */
+  /* margin-left: 2vw; */
+  width: 100%;
+  /* padding-top: 5px; */
+  /* display: inline-block; */
+  border: 1px solid grey;
+}
+
+
+/* D3 relevant */
+.tick text{
+  /* text-anchor: middle; /* or start or end */ */
+  text-align: left;
+  font-size: 20;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.row-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: blue;
+  /* padding: 20px; */
+  text-align: center;
+  font-size: 2em;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  /* background-color: grey; */
+  /* padding-left: 10px; */
+  /* padding: 20px; */
+  /* padding-left: 100px; */
+}
